@@ -1,0 +1,19 @@
+{
+  "name": "forkify",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moustaphdiakite/Forkify.git"
+  },
+  "author": "Moustaph Diakite",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/moustaphdiakite/Forkify/issues"
+  },
+  "homepage": "https://github.com/moustaphdiakite/Forkify#readme"
+}
