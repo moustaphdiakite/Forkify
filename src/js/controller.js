@@ -6,15 +6,10 @@ import 'regenerator-runtime/runtime';
 
 const recipeContainer = document.querySelector('.recipe');
 
-
-
 // https://forkify-api.herokuapp.com/v2
 
 ///////////////////////////////////////
 
-['hashchange', 'load'].forEach(ev =>
-  window.addEventListener(ev, controlRecipes)
-);
 async function controlRecipes() {
   try {
     const id = window.location.hash.slice(1);
@@ -29,3 +24,8 @@ async function controlRecipes() {
     alert(err);
   }
 }
+
+function init() {
+  recipeView.addhandlerRender(controlRecipes);
+}
+init();
