@@ -16,14 +16,11 @@ const timeout = function (s) {
 
 ///////////////////////////////////////
 
-showRecipe();
-
-window.addEventListener('hashchange', showRecipe);
-
+['hashchange', 'load'].forEach(ev => window.addEventListener(ev, showRecipe));
 async function showRecipe() {
   try {
     const id = window.location.hash.slice(1);
-    console.log(id)
+    if (!id) return;
     // 1) Loading Recipe
     renderSpinner(recipeContainer);
     const response = await fetch(
