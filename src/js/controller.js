@@ -7,9 +7,9 @@ import 'core-js/stable';
 import 'regenerator-runtime/runtime';
 import { async } from 'regenerator-runtime/runtime';
 
-if (module.hot) {
-  module.hot.accept();
-}
+// if (module.hot) {
+//   module.hot.accept();
+// }
 const recipeContainer = document.querySelector('.recipe');
 
 // https://forkify-api.herokuapp.com/v2
@@ -25,7 +25,6 @@ async function controlRecipes() {
 
     // Rendering Recipe
     recipeView.render(model.state.recipe);
-    
   } catch (err) {
     recipeView.renderError();
   }
@@ -42,7 +41,7 @@ async function controlSearchResults() {
     await model.loadSearchResults(query);
 
     // Logging results
-    resultsView.render(model.state.search.results);
+    resultsView.render(model.getSearchResultsPage());
   } catch (err) {
     console.log(err);
   }
