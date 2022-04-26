@@ -98,8 +98,7 @@ function clearBookmarks() {
   localStorage.clear('bookmarks');
 }
 
-function init() {
+(function init() {
   const storage = localStorage.getItem('bookmarks');
   if (storage) state.bookmarks = JSON.parse(storage);
-}
-init();
+})();
